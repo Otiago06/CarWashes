@@ -36,6 +36,8 @@ Gerencia os usuários e suas permissões ao sistema.
 * **LICENÇA:**
 Informações sobre o uso do sistema e licenciamento.
 ##
-~~~By FLATINET INFORMÁTICA
-Desenvolvido por Tiago Oliveira
-Com as colaborações de Flávia Werner, Gustavo Guanabara, Felipe SSP, Uilian Fragallo, Rafa Ballerini, Caio D.
+
+\# | **©2021 FLATINET INFORMÁTICA**
+-- | --
+\> | _Dev by Tiago Oliveira_
+\> | _Com as colaborações de Flávia Werner, Gustavo Guanabara, Felipe SSP, Uilian Fragallo, Rafa Ballerini, Caio D._
