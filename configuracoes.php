@@ -20,31 +20,7 @@
     
     <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
 
-    <!-- Font Título -->
-    <style>
-      @font-face {
-        font-family: fontTitulo;
-        src: url(assets/fonts/paola.ttf);
-      }
-
-      .titulo {
-        font-family: fontTitulo;
-        font-size: 25px;
-      }
-
-      .recuo {
-        top: -5px;
-      }
-
-      .divider {
-        height: 4px;
-      }
-
-      .theme {
-        background-color: #4F969A;
-      }
-    </style>
-
+    <link rel="stylesheet" href="style.css">
     <title>FLATICAR</title>
   </head>
   <body>
@@ -54,7 +30,7 @@
         &nbsp;<a href="index.php" class="navbar-brand">&nbsp;<i class="fas fa-arrow-left fa-1x"></i></a>
       </span>
       <span class="navbar-text">
-        <a><span class="titulo">Configuracoes</span></a>
+        <a><span class="titulo">CONFIGURAÇÕES</span></a>
       </span>
       <span class="navbar-text">
         &nbsp;
