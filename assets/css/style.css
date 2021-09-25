@@ -3,6 +3,10 @@
   src: url(assets/fonts/paola.ttf);
 }
 
+body {
+  background-color: #04252d;
+}
+
 .titulo {
   font-family: 'fontTitulo';
   font-size: 25px;
@@ -14,8 +18,4 @@
 
 .divider {
   height: 4px;
-}
-
-body {
-  background-color: #04252d;
 }
