@@ -22,26 +22,26 @@
   }
 ?>
 <script>
-          // Verifica clique em qualquer checkbox da tela
-          $("input[type='checkbox']").click(function() {
-              var total = 0
-              // Percorre todos os checkboxes
-              $("input[type='checkbox']").each(function() {
-                  // Verifica se está selecionado
-                  if ($(this).is(':checked')) {
-                      // Incremente cálculo
-                      total = total + parseFloat($(this).data("price"))
-                  }
-              })
+    // Verifica clique em qualquer checkbox da tela
+    $("input[type='checkbox']").click(function() {
+        var total = 0
+        // Percorre todos os checkboxes
+        $("input[type='checkbox']").each(function() {
+            // Verifica se está selecionado
+            if ($(this).is(':checked')) {
+                // Incremente cálculo
+                total = total + parseFloat($(this).data("price"))
+            }
+        })
 
-              // Exibe Total
-              $("#total").html(total.toLocaleString('pt-BR', {
-                  style: 'currency',
-                  currency: 'BRL',
-                  minimumFractionDigits: 2
-              }))
-          })
-      </script>
+        // Exibe Total
+        $("#total").html(total.toLocaleString('pt-BR', {
+            style: 'currency',
+            currency: 'BRL',
+            minimumFractionDigits: 2
+        }))
+    })
+</script>
 
 <!--
 <div class="form-check">
