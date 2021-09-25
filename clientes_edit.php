@@ -51,31 +51,7 @@
     
     <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
 
-    <!-- Font Título -->
-    <style>
-      @font-face {
-        font-family: fontTitulo;
-        src: url(assets/fonts/paola.ttf);
-      }
-
-      .titulo {
-        font-family: fontTitulo;
-        font-size: 25px;
-      }
-
-      .recuo {
-        top: -5px;
-      }
-
-      .divider {
-        height: 4px;
-      }
-
-      body {
-        background-color: #04252d;
-      }
-    </style>
-
+    <link rel="stylesheet" href="style.css">
     <title>CarWashes</title>
   </head>
   <body>
