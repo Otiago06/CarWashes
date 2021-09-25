@@ -20,79 +20,7 @@
     
     <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
 
-    <!-- Font Título -->
-    <style>
-      @font-face {
-        font-family: fontTitulo;
-        src: url(assets/fonts/paola.ttf);
-      }
-
-      .titulo {
-        font-family: fontTitulo;
-        font-size: 25px;
-      }
-
-      .recuo {
-        top: -5px;
-      }
-
-      .divider {
-        height: 4px;
-      }
-
-      body {
-        background-color: #04252d;
-      }
-    </style>
-    <script>
-        $(document).ready(function(){
-          $('#categoria').change(function(){
-              //Selected value
-              var inputValue = $(this).val();
-              //alert('teste: '+inputValue)
-              var dados = {
-                palavra : inputValue
-              }
-              //Ajax for calling php function
-              $.post('categorias_search_return.php', { dropdownValue: dados }, function(retorna){
-                  //Mostra dentro da ul os resultado obtidos 
-                  $(".resultado").html(retorna);
-              });
-          });
-      });            
-    </script>
-    <script>
-      $(document).ready(function(){
-          $("#placa").change(function(){          
-            var placa = $(this).val()        
-            if(placa != ''){
-              var dados = {
-                palavra : placa
-            }
-            $.ajax({ url: 'placa_search_return.php', method: 'POST', dataType: 'json', data: dados }).done(function (retorno) {
-                console.info(retorno)
-                $("#modelo").val(retorno[0].modelo);
-                $("#cor").val(retorno[0].cor);
-                $("#categoria").val(retorno[0].categoria);
-                $("#categoria").trigger('change');
-            }).fail(function (retorno) {
-            console.error(retorno)
-            })
-          }
-        });
-      });         
-    </script>
-    <script>
-      $("#checkbox").click(function(){
-          var total = 0
-          $("#checkbox").each(function(){
-              if($(this).isChecked()) {
-                  total = total + parseFloat($(this).val());
-              }
-          });
-          $("#exibirtotal").html(total);
-      })
-    </script>
+    <link rel="stylesheet" href="style.css">
     <title>CarWashes</title>
   </head>
   <body>
@@ -172,8 +100,10 @@
           </div>
         </div>
       <hr><small class="text-muted">&nbsp;Serviços a serem realizados</small><br>
-      <div class="container resultado">      
-      </div>
+      <div class="container resultado"></div>
+      <div class="h3 my-3 text-uppercase">Total dos serviços: <span id="total" class="text-info">R$ 0,00</span></div>
+
+      
       <!--<div class="container">
         <?php
           $sql_servicos = "SELECT * FROM tb_servicos";
@@ -328,5 +258,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     
+    <script src="categorias_search.js"></script>
+    <script src="placa_search.js"></script>
   </body>
 </html>
