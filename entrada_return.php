@@ -24,7 +24,7 @@
   echo '<hr>';
   if(isset($_POST['checkboxvar'])){
     $hobby = $_POST['checkboxvar'];
-
+    
     foreach ($hobby as $hobys=>$value){
       echo "Serviço: ".$value."<br>";
     }

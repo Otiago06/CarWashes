@@ -4,6 +4,7 @@
 
 	session_start();
 
+	$ambiente = $_SERVER['HTTP_HOST'];
 	$servername = "localhost";
 	$username = "root";
 	$password = "";
